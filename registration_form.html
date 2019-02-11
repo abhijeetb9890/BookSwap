@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="stylesheetregister.css">
+
+    <title>TheBookswapCommunity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+
+    <!-- Materialize css
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"> -->
+
+
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    
+    .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+  }
+  .kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+  }
+    </style>
+</head>
+<body  class="full">
+
+	<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">TheBookswapCommunity</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="howto.html">How it works</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="registration_form.html">Sign up for free</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron" style="padding-top:50px;">
+            <h1>Sign Up</h1>
+            <p>Bookswap is the a very popular and interesting pedestal for exchanging, selling, borrowing and browsing all kinds of books on the web.</p>
+        </div>
+    </div>
+
+     <div class="container"> 
+       <div class="row">
+        <div class="form_bg">
+          <form role="form" class="col-lg-10" id="registrationform" method="post">
+            <div class="form-header col-lg-offset-6">
+            SIGN UP     
+         </div>
+            <div class="form-group" >
+                <label for="Username">Username:</label>
+                <input class="form-control" id="username" type="Username" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="form-control" id="email" type="email" placeholder="johndoe@example.com">
+            </div>
+            <div class="form-group">
+              <label for="password">Password: </label>
+              <input class="form-control" id="password" type="password" placeholder="Enter Password">
+            </div>
+            <div class="form-group">
+              <label for="password">Re-enter Password: </label>
+              <input class="form-control" id="password" type="password" placeholder="Enter Password">
+            </div>
+            <!--<div class="checkbox">
+              <label><input type="checkbox">Male</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox">Female</label>
+            </div> -->
+
+            <div class="form-group">
+               <div class="col-lg-4">
+                  <div class="radio">
+                      <label>
+                          <input type="radio" name="gender" value="male" /> Male
+                      </label>
+                  </div>
+                  <div class="radio">
+                      <label>
+                          <input type="radio" name="gender" value="female" /> Female
+                      </label>
+                  </div>
+                  <div class="radio">
+                      <label>
+                          <input type="radio" name="gender" value="other" /> Other
+                      </label>
+                  </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-info col-lg-offset-5" name="signup" value="Sign up"><span class="glyphicon glyphicon-log-in"></span> Register</button>
+          </form>
+          <div class="col-xs-12" style="height:50px;"></div>
+          <footer>
+              <div class="row">
+                  <div class="col-lg-8">
+                      <p>Copyright &copy; TheBookSwapCommunity2016</p>
+                  </div>
+              </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<div class="row">
+  <form class="col s8 offset-s2" >
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Last Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="username" type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    <div class="col s6 offset-s9">
+      <button class="btn waves-effect waves-light red" type="submit">Send</button>
+    </div>
+      
+  </div> 
+    
+
+</div>
+        <footer>
+            <div class="row">
+                <div class="col 6 offset-s2">
+                    <p>Copyright &copy; TheBookswapCommunity 2016</p>
+                </div>
+            </div>
+        </footer> -->
+
+
+	<!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script> 
+
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+
+    <script src="js/register.js"></script>
+
+    <!-- Materialize js
+    <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+</body>
+</html>

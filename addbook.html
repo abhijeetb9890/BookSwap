@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>TheBookSwapCommunity</title>
+
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        body{
+            padding-top: 70px;
+        }
+
+        footer{
+            margin:50px 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+      function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#profileimage')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(150);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+      function valid()
+        {
+            var book_name=document.addbook_form.book_name.value;
+            var author_name=document.addbook_form.author_name.value;
+            var book_cost=document.addbook_form.book_cost.value;
+            
+            if(book_name == '')
+                {
+                  //document.getElementById('error').innerHTML="*Please Enter Username";
+                  alert("Please Enter a Book name!");
+                  return false;
+                }
+            /*if(email == '' || atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+                {
+                  //document.getElementById('error').innerHTML="*Please Enter Email";
+                  alert("Please Enter valid Email");
+                  return false;
+                }*/
+            if(author_name == '')
+                {
+                  //document.getElementById('error').innerHTML="*Please Enter Password";
+                  alert("Please Enter a Author's name!");
+                  return false;
+                }
+            if(book_cost == 0 || book_cost == '')
+                {
+                  //document.getElementById('error').innerHTML="*Passwords do not match";
+                  alert("Book cost cannot be null!");
+                  return false;
+                }
+                return true;
+        }
+
+    </script>
+
+
+
+</head>
+<body background="back1.jpg">
+
+	<!-- Navigation -->    
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="explore.html">TheBookswapCommunity</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="explore.html">Explore</a>
+                    </li>
+                    <li>
+                        <a href="myswaps.html">My Swaps</a>
+                    </li>
+                    <li>
+                        <a href="mybooks.html">My Books</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="request.html">My Requests</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                		<a href="index.html">Log-Out</a>
+                	</li>
+                </ul>
+                <div class="nav navbar-nav navbar-right">
+                	<img src="http://placehold.it/30x30" class="profile-image img-circle" style="padding-top:10px ;padding-bottom:10px;"></a>
+    			</div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+        <div>
+            <div>
+                <form enctype='multipart/form-data' role="form"  id="addbook_form" onsubmit="return valid()" method="post" action="" name="addbook_form">
+                    <h2 class="lead form-header col-md-8 col-md-offset-4" style="font-size:70px;color:#ffffff">Add a Book</h2>
+                    <div class="row">
+                        <div class="form-group col-md-8 pull-left">
+                            <img src="profile.png" class="profile-image" width="150px" height="150px" id="profileimage" alt="your image"></a>
+                            <input type="file" id="user" name="book_image" class="form-control" onchange="readURL(this)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="Book name">
+                                <h3 style="color:#ffffff">
+                                    Enter the Book Name: 
+                                </h3>
+                            </label>
+                            <input type="text" name="book_name" id="book_name" class="form-control" placeholder="Name of Book">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="Book author">
+                                <h3 style="color:#ffffff">
+                                    Enter the Book author's Name: 
+                                </h3>
+                            </label>
+                            <input type="text" name="author_name" id="author_name" class="form-control" placeholder="Author Name">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="book synopsis">
+                                <h3 style="color:#ffffff">
+                                    Enter a short synopsis about the book: 
+                                </h3>
+                            </label>
+                            <textarea name="book_synopsis" id="synopsis" cols="50" rows="10" class="form-control" placeholder="Book Synopsis"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label for="book cost">
+                                <h3 style="color:#ffffff">
+                                    Enter a owner oriented book price $: 
+                                </h3>
+                            </label>
+                            <input type="number" name="book_cost" min="0" step="any" id="book_cost">
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="category">
+                                <h3 style="color:#ffffff">
+                                    Select category for book: 
+                                </h3>
+                            </label>
+                            <select class="form-control" id="category">
+                                <option>Education</option>
+                                <option>Self-Help</option>
+                                <option>Thriller</option>
+                                <option>Sci Fi</option>
+                                <option>Horror</option>
+                                <option>Detective</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="form-group col-md-8" align="center">
+                            <input type="submit" name="submit" id="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; TheBookSwapCommunity2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/addbook.js"></script>
+
+</body>
+</html>
